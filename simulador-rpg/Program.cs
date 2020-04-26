@@ -1,4 +1,5 @@
 ﻿using System;
+using Entidades;
 
 namespace simulador_rpg
 {
@@ -6,7 +7,9 @@ namespace simulador_rpg
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Agora vamos colocar a mão na massa!");
+            var ng = new NewGame();
+            //ng.inicarNovoJogo();
+
         }
     }
 }

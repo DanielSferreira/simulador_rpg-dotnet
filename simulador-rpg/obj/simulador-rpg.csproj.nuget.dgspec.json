@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DAN\\Documents\\projetos\\Node\\simulador-rpg\\simulador-rpg.csproj": {}
+    "C:\\Users\\DAN\\Documents\\projetos\\Dotnet\\simulador-rpg\\simulador-rpg.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DAN\\Documents\\projetos\\Node\\simulador-rpg\\simulador-rpg.csproj": {
+    "C:\\Users\\DAN\\Documents\\projetos\\Dotnet\\simulador-rpg\\simulador-rpg.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DAN\\Documents\\projetos\\Node\\simulador-rpg\\simulador-rpg.csproj",
+        "projectUniqueName": "C:\\Users\\DAN\\Documents\\projetos\\Dotnet\\simulador-rpg\\simulador-rpg.csproj",
         "projectName": "simulador-rpg",
-        "projectPath": "C:\\Users\\DAN\\Documents\\projetos\\Node\\simulador-rpg\\simulador-rpg.csproj",
+        "projectPath": "C:\\Users\\DAN\\Documents\\projetos\\Dotnet\\simulador-rpg\\simulador-rpg.csproj",
         "packagesPath": "C:\\Users\\DAN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DAN\\Documents\\projetos\\Node\\simulador-rpg\\obj\\",
+        "outputPath": "C:\\Users\\DAN\\Documents\\projetos\\Dotnet\\simulador-rpg\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -39,6 +39,12 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
