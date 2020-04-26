@@ -1,5 +1,5 @@
 ﻿using System;
-using Entidades;
+using Componentes;
 
 namespace simulador_rpg
 {
@@ -8,8 +8,6 @@ namespace simulador_rpg
         static void Main(string[] args)
         {
             var ng = new NewGame();
-            //ng.inicarNovoJogo();
-
         }
     }
 }

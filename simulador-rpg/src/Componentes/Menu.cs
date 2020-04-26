@@ -3,12 +3,10 @@ namespace Componentes
 {
     public class Menu
     {
-        private OptionsMenu _option;
-        private int _escolha;
         public Menu()
         {
-            this._option = new OptionsMenu();
-            this.option(this._option.getOption());
+            var options = new OptionsMenu();
+            this.option(options.getOption());
         }
         private void option(int opt)
         {
@@ -22,6 +20,9 @@ namespace Componentes
                     return;
                 case 3:
                     this.carregarOpcoes();  
+                    return;
+                case 4:
+                    Console.WriteLine("Trocando os personagens");  
                     return;
             }
         }

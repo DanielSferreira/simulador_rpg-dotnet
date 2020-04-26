@@ -1,6 +1,5 @@
 using System;
-using Componentes;
-namespace Entidades
+namespace Componentes
 {
 
 public class NewGame 
