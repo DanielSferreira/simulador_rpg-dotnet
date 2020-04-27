@@ -2,8 +2,7 @@ using System;
 
 namespace Entidades
 {
-    public class Jogador
+    public  class PlayerAttr: IPlayerAttr
     {
-       
     }
 }

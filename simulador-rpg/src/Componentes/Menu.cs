@@ -1,4 +1,6 @@
 using System;
+using Entidades.Classes;
+using Mecanicas;
 namespace Componentes
 {
     public class Menu
@@ -22,7 +24,7 @@ namespace Componentes
                     this.carregarOpcoes();  
                     return;
                 case 4:
-                    Console.WriteLine("Trocando os personagens");  
+                    this.criarJogador();  
                     return;
             }
         }
@@ -37,6 +39,15 @@ namespace Componentes
         private void carregarOpcoes()
         {
             Console.WriteLine("Carregando Opções do joho");
+        } 
+        private void criarJogador()
+        {
+            Console.WriteLine("Criando Jogador");
+            InfoPlayerInit newPlayerInit = new InfoPlayerInit();
+            newPlayerInit.InfoPlayerNameAndClassName("Daniel","Guerreiro");
+
+            NewPlayer dan = new NewPlayer(newPlayerInit);
+            dan.getPlayer();
         } 
         private void ErroOpcao()
         {

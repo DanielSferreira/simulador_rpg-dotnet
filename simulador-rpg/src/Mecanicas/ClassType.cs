@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+using Entidades.Classes;
+
+namespace Mecanicas
+{
+    public static class ClassType
+    {
+        private static Dictionary<string, IClassPlayer> classType = new Dictionary<string, IClassPlayer>();
+        
+        private static void setTipo(){
+            classType.Add("Guerreiro", new Guerreiro());
+        }
+        public static IClassPlayer getClass(string className)
+        {
+            try
+            {
+                return classType[className];
+            }
+            catch (System.Exception)
+            {
+                Console.WriteLine($"Como não foi achado uma classe com o nome de {className}, criaremos a uma nova Classe do tipo, Guerreiro");
+                return new Guerreiro();
+            }
+        }
+    }
+}
