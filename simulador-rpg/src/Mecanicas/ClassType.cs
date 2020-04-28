@@ -11,7 +11,7 @@ namespace Mecanicas
         private static void setTipo(){
             classType.Add("Guerreiro", new Guerreiro());
         }
-        public static IClassPlayer getClass(string className)
+        public static IClassPlayer getClassName(string className)
         {
             try
             {

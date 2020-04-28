@@ -42,12 +42,7 @@ namespace Componentes
         } 
         private void criarJogador()
         {
-            Console.WriteLine("Criando Jogador");
-            InfoPlayerInit newPlayerInit = new InfoPlayerInit();
-            newPlayerInit.InfoPlayerNameAndClassName("Daniel","Guerreiro");
-
-            NewPlayer dan = new NewPlayer(newPlayerInit);
-            dan.getPlayer();
+            InitializateNewPlayer Ip = new InitializateNewPlayer();
         } 
         private void ErroOpcao()
         {

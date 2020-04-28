@@ -11,7 +11,7 @@ namespace Mecanicas
             Console.WriteLine("Executando a Criação");
             this._player.Attr = player.getPlayerAttr();
             //this._player.Attr.PlayerName = "player.Name";
-            this._player.ClassP = ClassType.getClass("Guerreiro");
+            this._player.ClassP = ClassType.getClassName( player.getClassName() );
             Console.WriteLine("Conclusão da Criação");
         }
         public void getPlayer()
