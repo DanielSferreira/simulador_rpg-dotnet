@@ -30,7 +30,9 @@ namespace Componentes
         }
         private void novoJogo()
         {
-            Console.WriteLine("Novo jogo criado");
+            Console.WriteLine("Criando um novo jogo");
+            InitializateNewPlayer Ip = new InitializateNewPlayer();
+            Console.WriteLine("Carregando a Torre infinita");
         } 
         private void carregarJogo()
         {
@@ -42,7 +44,6 @@ namespace Componentes
         } 
         private void criarJogador()
         {
-            InitializateNewPlayer Ip = new InitializateNewPlayer();
         } 
         private void ErroOpcao()
         {

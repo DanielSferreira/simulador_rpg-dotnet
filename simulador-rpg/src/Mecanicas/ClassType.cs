@@ -13,6 +13,7 @@ namespace Mecanicas
         }
         public static IClassPlayer getClassName(string className)
         {
+            setTipo();
             try
             {
                 return classType[className];
