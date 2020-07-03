@@ -12,6 +12,5 @@ namespace Mecanicas
         {
            this.T = new Tower();  
         }
-        public 
     }
 }

@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-using Entidades.Classes;
+using Componentes;
 
 namespace Mecanicas
 {
@@ -8,9 +8,9 @@ namespace Mecanicas
     {
         public StartGame()
         {
-            InitializateNewPlayer Ip = new InitializateNewPlayer();
             TowerBuilder Tb = new TowerBuilder();
-            Tb.setPlayerInTower(Ip);
+            InitializateNewPlayer Ip = new InitializateNewPlayer();
+            //Tb.setPlayerInTower(Ip);
             
         }
     }

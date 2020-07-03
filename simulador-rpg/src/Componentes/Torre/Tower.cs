@@ -1,4 +1,5 @@
 using System;
+using Entidades;
 
 namespace Componentes.Torre
 {

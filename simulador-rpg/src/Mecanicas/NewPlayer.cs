@@ -19,7 +19,7 @@ namespace Mecanicas
             Console.WriteLine($"O Jogador se chama {this._player.Attr.PlayerName}");
             //return _player;
         }
-        public Player getPlayer()
+        public Player getPlayer(int number)
         {
             return _player;
         }
