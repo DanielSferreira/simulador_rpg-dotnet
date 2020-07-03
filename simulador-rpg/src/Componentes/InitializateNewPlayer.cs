@@ -4,6 +4,8 @@ namespace Componentes
 {
     public class InitializateNewPlayer
     {
+        private Player _player;
+
         public InitializateNewPlayer()
         {
             Console.WriteLine("Criando Jogador \n ");
@@ -22,5 +24,7 @@ namespace Componentes
             newPlayerInit.InfoPlayerNameAndClassName(name,className);
             return newPlayerInit;
         }
+
+        public Player getPlayer
     }
 }

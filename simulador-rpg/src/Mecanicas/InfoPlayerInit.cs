@@ -11,8 +11,9 @@ namespace Mecanicas
         public void InfoPlayerNameAndClassName(string name, string className)
         {
             Console.WriteLine("Definição dos atributos");
-            this.setPlayerAttr();
+            this.Name = name;
             this.ClassName = className;
+            this.setPlayerAttr();
         }
 
         public string getName(){
@@ -25,7 +26,7 @@ namespace Mecanicas
         }
         public void setPlayerAttr()
         {
-         Attr.PlayerName = "Daniel";
+         Attr.PlayerName = this.Name;
          Attr.HpBase = 500;
          Attr.Mana   = 100;
          Attr.Atk    = 15;

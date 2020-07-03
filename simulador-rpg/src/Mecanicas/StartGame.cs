@@ -11,6 +11,7 @@ namespace Mecanicas
             TowerBuilder Tb = new TowerBuilder();
             InitializateNewPlayer Ip = new InitializateNewPlayer();
             //Tb.setPlayerInTower(Ip);
+            Ip.get
             
         }
     }
