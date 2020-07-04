@@ -15,38 +15,37 @@ namespace Componentes
             switch (opt)
             {
                 case 1:
-                    this.novoJogo();  
+                    this.novoJogo();
                     return;
                 case 2:
-                    this.carregarJogo();  
+                    this.carregarJogo();
                     return;
                 case 3:
-                    this.carregarOpcoes();  
+                    this.carregarOpcoes();
                     return;
                 case 4:
-                    this.criarJogador();  
+                    this.criarJogador();
                     return;
             }
         }
         private void novoJogo()
-        {
-
-            new StartGame();
-        } 
+        { 
+            new StartGame(); 
+        }
         private void carregarJogo()
         {
             Console.WriteLine("Carregando jogo");
-        } 
+        }
         private void carregarOpcoes()
         {
             Console.WriteLine("Carregando Opções do joho");
-        } 
+        }
         private void criarJogador()
         {
-        } 
+        }
         private void ErroOpcao()
         {
             Console.WriteLine("Carregando jogo");
-        } 
-    }  
+        }
+    }
 }
