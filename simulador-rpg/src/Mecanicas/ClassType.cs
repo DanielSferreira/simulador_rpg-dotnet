@@ -9,7 +9,9 @@ namespace Mecanicas
         private static Dictionary<string, IClassPlayer> classType = new Dictionary<string, IClassPlayer>();
         
         private static void setTipo(){
-            classType.Add("Guerreiro", new Guerreiro());
+            classType.Add("Soldado", new Guerreiro());
+            classType.Add("Mago", new Mago());
+            classType.Add("Arqueiro", new Arqueiro());
         }
         public static IClassPlayer getClassName(string className)
         {

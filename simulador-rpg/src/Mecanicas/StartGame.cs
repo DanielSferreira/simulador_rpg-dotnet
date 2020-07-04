@@ -10,8 +10,8 @@ namespace Mecanicas
         {
             TowerBuilder Tb = new TowerBuilder();
             InitializateNewPlayer Ip = new InitializateNewPlayer();
-            //Tb.setPlayerInTower(Ip);
             Console.WriteLine($"O Nome do Jogador é {Ip.getPlayer().Attr.PlayerName}");
+            Console.WriteLine($"A Classe do Jogador é {Ip.getPlayer().ClassP.Name_Base}");
             
         }
     }

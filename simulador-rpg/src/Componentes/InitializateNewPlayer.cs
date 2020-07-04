@@ -9,7 +9,6 @@ namespace Componentes
 
         public InitializateNewPlayer()
         {
-            Console.WriteLine("Criando Jogador \n ");
             var ply = new NewPlayer(this.InitializatePlayer());
             this._player = ply.getPlayer();
         }
