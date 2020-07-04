@@ -11,7 +11,7 @@ namespace Mecanicas
             TowerBuilder Tb = new TowerBuilder();
             InitializateNewPlayer Ip = new InitializateNewPlayer();
             //Tb.setPlayerInTower(Ip);
-            Ip.get
+            Console.WriteLine($"O Nome do Jogador é {Ip.getPlayer().Attr.PlayerName}");
             
         }
     }

@@ -30,9 +30,8 @@ namespace Componentes
         }
         private void novoJogo()
         {
-            Console.WriteLine("Criando um novo jogo");
-            InitializateNewPlayer Ip = new InitializateNewPlayer();
-            Console.WriteLine("Carregando a Torre infinita");
+
+            new StartGame();
         } 
         private void carregarJogo()
         {

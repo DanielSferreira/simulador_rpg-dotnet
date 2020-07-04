@@ -1,5 +1,6 @@
 using System;
 using Mecanicas;
+using Entidades;
 namespace Componentes
 {
     public class InitializateNewPlayer
@@ -9,8 +10,8 @@ namespace Componentes
         public InitializateNewPlayer()
         {
             Console.WriteLine("Criando Jogador \n ");
-            NewPlayer dan = new NewPlayer(this.InitializatePlayer());
-            dan.getPlayer();
+            var ply = new NewPlayer(this.InitializatePlayer());
+            this._player = ply.getPlayer();
         }
         public InfoPlayerInit InitializatePlayer()
         {
@@ -25,6 +26,9 @@ namespace Componentes
             return newPlayerInit;
         }
 
-        public Player getPlayer
+        public Player getPlayer()
+        {
+            return _player;
+        }
     }
 }
