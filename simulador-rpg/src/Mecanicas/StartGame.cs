@@ -1,6 +1,5 @@
-using System;
-using System.Collections.Generic;
 using Componentes;
+using Mecanicas.game_play;
 
 namespace Mecanicas
 {
@@ -10,8 +9,12 @@ namespace Mecanicas
         {
             TowerBuilder Tb = new TowerBuilder();
             InitializateNewPlayer Ip = new InitializateNewPlayer();
-            Console.WriteLine($"O Nome do Jogador é {Ip.getPlayer().Attr.PlayerName}");
-            Console.WriteLine($"A Classe do Jogador é {Ip.getPlayer().ClassP.Name_Base}");
+            // Tb.setPlayerForTower(Ip.getPlayer());
+            
+            GamePlay gamePlay = new GamePlay();
+            gamePlay.InicializarJogo(Ip.getPlayer(),Tb.getTower());
+
+
             
         }
     }
