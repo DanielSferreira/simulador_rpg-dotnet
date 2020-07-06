@@ -9,7 +9,7 @@ namespace Mecanicas.game_play
         Player _player;
         Tower _tower;
 
-        public void InicializarJogo(Player player, Tower tower) 
+        public void InitializeGameWith(Player player, Tower tower) 
         {
             _player = player;
             _tower = tower;
@@ -18,6 +18,11 @@ namespace Mecanicas.game_play
         public void SubirUmAndar()
         {
             _tower.upFloors();
+        }
+
+        public void ShowActions()
+        {
+            new MenuGamePlay(_player,  _tower);
         }
         
     }

@@ -8,4 +8,13 @@ public class FloorTower
         FloorName = na;
         FloorNumber = nu;
     }
+
+    public string getFloorName()
+    {
+        return FloorName;
+    }
+    public int getFloorNumber()
+    {
+        return FloorNumber;
+    }
 }
