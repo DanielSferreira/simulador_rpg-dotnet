@@ -9,13 +9,14 @@ namespace Mecanicas
         {
             TowerBuilder Tb = new TowerBuilder();
             InitializateNewPlayer Ip = new InitializateNewPlayer();
-            // Tb.setPlayerForTower(Ip.getPlayer());
             
-            GamePlay gamePlay = new GamePlay();
-            gamePlay.InicializarJogo(Ip.getPlayer(),Tb.getTower());
-
-
-            
+            new GamePlay().InicializarJogo(Ip.getPlayer(),Tb.getTower());
         }
+
     }
 }
+
+/*
+    GamePlay gamePlay = new GamePlay();
+    gamePlay.InicializarJogo(Ip.getPlayer(),Tb.getTower());
+*/

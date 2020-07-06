@@ -1,12 +1,13 @@
 using System;
+using System.Collections.Generic;
 using Entidades;
 namespace Componentes.Torre
 {
     public abstract class ITower
     {
-        public FloorTower floor {get; set;}
-        public string nomeTorre {get; set;}
-        public Player PlayerOfTower {get; set;}
+        protected Floors floors {get; set;}
+        protected string nomeTorre {get; set;}
+        protected Player PlayerOfTower {get; set;}
         
     }  
 }

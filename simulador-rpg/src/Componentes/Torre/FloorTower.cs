@@ -1,5 +1,11 @@
 public class FloorTower
 {
-    public string FloorName {get;set;}
-    public int FloorNumber {get;set;}
+    private string FloorName;
+    private int FloorNumber;
+
+    public FloorTower(string na, int nu)
+    {
+        FloorName = na;
+        FloorNumber = nu;
+    }
 }

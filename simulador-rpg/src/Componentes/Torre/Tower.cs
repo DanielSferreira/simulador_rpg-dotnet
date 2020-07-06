@@ -8,7 +8,10 @@ namespace Componentes.Torre
         public Tower()
         {
             this.nomeTorre = "Torre Infinita";
-            this.floor = new FloorTower();
+        }
+        public void upFloors()
+        {
+            this.floors.next();
         }
         public void setPlayerInTower(Player player)
         {

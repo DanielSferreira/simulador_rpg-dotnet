@@ -13,8 +13,11 @@ namespace Mecanicas.game_play
         {
             _player = player;
             _tower = tower;
+        }
 
-            Console.WriteLine($"Jogo Inializado com Jogador: {_player.Attr.PlayerName} lutando para sair da {_tower.nomeTorre}");
+        public void SubirUmAndar()
+        {
+            _tower.upFloors();
         }
         
     }
