@@ -22,7 +22,7 @@ namespace Mecanicas.game_play
             switch (opt)
             {
                 case 1:
-                    this.Walk();
+                    this.NextBatlle();
                     break;
                 case 2:
                     this.Status();
@@ -37,9 +37,9 @@ namespace Mecanicas.game_play
             return true;
 
         }
-        private void Walk()
+        private void NextBatlle()
         {
-            Console.WriteLine("Andando");
+            Console.WriteLine("Vamos lá!");
             Console.WriteLine("Agora tem Luta");
         }
         private void Status()

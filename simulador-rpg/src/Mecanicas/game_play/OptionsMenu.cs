@@ -11,6 +11,7 @@ namespace Mecanicas.game_play
 
         public OptionsMenu()
         {
+            WriteLine("Párabens, estamos na torre, Agora vamos subir");
             this.setOptionsList();
         }
         public void ShowOptions()
@@ -36,7 +37,6 @@ namespace Mecanicas.game_play
         {
             
             WriteLine("");
-            WriteLine("Párabens, estamos na torre, Agora vamos subir");
             WriteLine("**Escolha uma das opções**");
             
             foreach (var item in this.options)
