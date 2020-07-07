@@ -15,15 +15,8 @@ namespace Mecanicas.game_play
             _tower = tower;
         }
 
-        public void SubirUmAndar()
-        {
-            _tower.upFloors();
-        }
-
-        public void ShowActions()
-        {
-            new MenuGamePlay(_player,  _tower);
-        }
-        
+        public void ShowActions() =>
+            //Obs: passei essas referencias para manipular o combate a partir do menu
+            new MenuGamePlay(_player, _tower);
     }
 }

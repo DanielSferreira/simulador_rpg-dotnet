@@ -1,12 +1,12 @@
-namespace simulador_rpg.src.Entidades.Inimigos
+namespace Entidades.Inimigos
 {
-    public class slime
+    public class Slime : Enemy
     {
         public string name = "Slime Azul";
         public float hp { get; set; }
         public float ataque { get; set; }
 
-        public slime()
+        public Slime()
         {
             this.hp = 350;
             this.ataque = 35;
