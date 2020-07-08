@@ -26,5 +26,9 @@ namespace Mecanicas
                 return new Guerreiro();
             }
         }
+        public static List<string> getTypes()
+        {
+            return new List<string>(classType.Keys);
+        }
     }
 }

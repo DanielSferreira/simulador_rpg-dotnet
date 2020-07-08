@@ -3,11 +3,21 @@ using Entidades;
 using Componentes.Torre;
 
 namespace Mecanicas.game_play
+
 {
+public struct Player_and_Tower_struct
+{
+    public Player player;
+    public Tower tower;
+
+}
     public class MenuGamePlay
     {
+        public Player_and_Tower_struct play_tower;
         public MenuGamePlay(Player player, Tower tower)
         {
+            play_tower.player = player;
+            play_tower.tower = tower;
             bool ContinueClimbing = true;
             OptionsMenu opt = new OptionsMenu();
             while (ContinueClimbing)
@@ -39,8 +49,7 @@ namespace Mecanicas.game_play
         }
         private void NextBatlle()
         {
-            Console.WriteLine("Vamos lá!");
-            Console.WriteLine("Agora tem Luta");
+            var algo = new Combate(this.play_tower.player);
         }
         private void Status()
         {

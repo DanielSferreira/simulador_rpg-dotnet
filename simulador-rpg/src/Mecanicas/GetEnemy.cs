@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Entidades.Inimigos;
 namespace Mecanicas
@@ -5,21 +6,25 @@ namespace Mecanicas
     public class GetEnemy
     {
         private Dictionary<int, Enemy> _listEnemy = new Dictionary<int, Enemy>();
+        public List<Enemy> AllEnemys => new List<Enemy>(this._listEnemy.Values);
 
         public GetEnemy()
         {
             this._listEnemy.Add(1,new Bat());
             this._listEnemy.Add(2,new Slime());
+            this._listEnemy.Add(3,new Enemy(){hp = 500, name = "Rat", ataque = 100});
+            this._listEnemy.Add(4,new Enemy(){hp = 450, name = "Skeleton", ataque = 360});
+            this._listEnemy.Add(5,new Enemy(){hp = 360, name = "Orc1", ataque = 500});
         }
 
         public Enemy GetEnemyByNumber(int index) 
         {
-            return this._listEnemy[index-1];
+            return this._listEnemy[index];
         }
         public Enemy GetEnemyRandom() 
         {
-            
-            return this._listEnemy[0];
+            int indexRnd = (int) new Random().Next(1, this._listEnemy.Count);
+            return this._listEnemy[indexRnd];
         }
     }
 }
