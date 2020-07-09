@@ -54,7 +54,7 @@ namespace Mecanicas.game_play
                 return this.readLine();
             }
 
-            if(this._escolha > 0 && this._escolha < this.options.Count+1)
+            if(this._escolha > 0 && this._escolha <= 4)
                 return this._escolha;
             else
             {

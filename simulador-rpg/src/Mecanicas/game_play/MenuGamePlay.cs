@@ -75,8 +75,7 @@ namespace Mecanicas.game_play
         }
         private void Status()
         {
-            Console.WriteLine("Status:");
-            Console.WriteLine("Tá tudo certo!");
+            new Status(this.play_tower.player);
         }
         private void MenuItens()
         {
