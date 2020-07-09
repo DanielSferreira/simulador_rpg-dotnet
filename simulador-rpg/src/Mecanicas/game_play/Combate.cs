@@ -6,7 +6,6 @@ namespace Mecanicas.game_play
 
     public class Combate
     {
-        private GetEnemy enemy1;
         private Enemy actual_enemy;
         private MenuCombat menu_c = new MenuCombat();
         private bool alternar_batle = false;
@@ -26,12 +25,22 @@ namespace Mecanicas.game_play
             if (res == "ataque")
             {
                 if (alternar_batle == true)
-                    e.hp = (int)(e.hp - (p.Attr.Atk / 10));
+                    e.hp = e.hp - (p.Attr.Atk / 5);
                 else
-                    p.Attr.HpBase = p.Attr.HpBase - e.ataque / 10;
+                    p.Attr.HpBase = p.Attr.HpBase - (e.ataque / 5);
             }
+            
             this.alternar_batle = !this.alternar_batle;
-            if (p.Attr.HpBase > 0 || e.hp > 0) batle(p, e);
+
+            Console.WriteLine($"Status da Luta: \n{p.Attr.PlayerName}: {p.Attr.HpBase} - {e.name}: {e.hp}");
+
+            if(e.hp <= 0)
+                Console.WriteLine($"{p.Attr.PlayerName} Venceu!!! Vamos prosseguir.");
+            else if (p.Attr.HpBase <= 0) 
+                Console.WriteLine($"{p.Attr.PlayerName} Se ferrou.");
+
+            else 
+                batle(p, e);
         }
     }
 }

@@ -7,7 +7,7 @@ namespace Entidades.Inimigos
         {
             this.name = "Slime Azul";
             this.hp = 350;
-            this.ataque = 35;
+            this.ataque = 50;
         }
     }
 }

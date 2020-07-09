@@ -17,7 +17,7 @@ namespace Componentes
             Console.WriteLine("Digite um Nome para seu Jogador:");
             string name = Console.ReadLine();
             Console.WriteLine("Agora escolha uma classe para ele:");
-            Console.WriteLine("1 - Guerreiro: (os outro não vou colocar agora)");
+            Console.WriteLine("1 - Soldado: (os outro não vou colocar agora)");
             string className = Console.ReadLine();
 
             InfoPlayerInit newPlayerInit = new InfoPlayerInit();

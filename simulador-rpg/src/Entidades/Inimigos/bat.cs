@@ -7,7 +7,7 @@ namespace Entidades.Inimigos
         {
             this.name = "Bat";
             this.hp = 250;
-            this.ataque = 45;
+            this.ataque = 75;
         }
     }
 }

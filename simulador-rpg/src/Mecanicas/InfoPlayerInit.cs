@@ -4,13 +4,12 @@ namespace Mecanicas
 {
     public class InfoPlayerInit
     {
-        private string Name = "Abobora";
+        private string Name;
         private PlayerAttr Attr = new PlayerAttr();
         private string ClassName;
 
         public void InfoPlayerNameAndClassName(string name, string className)
         {
-            Console.WriteLine("Definição dos atributos");
             this.Name = name;
             this.ClassName = className;
             this.setPlayerAttr();
@@ -28,11 +27,11 @@ namespace Mecanicas
         {
          Attr.PlayerName = this.Name;
          Attr.HpBase = 500;
-         Attr.Mana   = 100;
-         Attr.Atk    = 15;
-         Attr.Def    = 10;
-         Attr.AtkM   = 10;
-         Attr.DefM   = 5;
+         Attr.Mana   = 250;
+         Attr.Atk    = 250;
+         Attr.Def    = 270;
+         Attr.AtkM   = 100;
+         Attr.DefM   = 50;
         }
         public PlayerAttr getPlayerAttr()
         {
