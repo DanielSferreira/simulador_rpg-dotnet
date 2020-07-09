@@ -6,12 +6,12 @@ namespace Entidades
     public abstract class IPlayerAttr
     {
         public string PlayerName { get; set; }
-        public int HpBase { get; set; }
-        public int Mana   { get; set; }
-        public int Atk    { get; set; }
-        public int Def    { get; set; }
-        public int AtkM   { get; set; }
-        public int DefM   { get; set; }
+        public double HpBase { get; set; }
+        public double Mana   { get; set; }
+        public double Atk    { get; set; }
+        public double Def    { get; set; }
+        public double AtkM   { get; set; }
+        public double DefM   { get; set; }
         
     }
 }
