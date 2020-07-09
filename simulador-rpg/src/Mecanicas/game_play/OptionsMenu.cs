@@ -25,13 +25,8 @@ namespace Mecanicas.game_play
             return this._escolha;
         }
 
-        private void setOptionsList()
-        {
-            this.options.Add("1 - Prosseguir");
-            this.options.Add("2 - Status");
-            this.options.Add("3 - Itens");
-            this.options.Add("4 - Chutar o balde");
-        }
+        private void setOptionsList() =>
+            this.options.Add("1 - Prosseguir | 2 - Status | 3 - Itens | 4 - Chutar o balde");
 
         private void getOptionsList()
         {

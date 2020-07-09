@@ -49,11 +49,11 @@ public struct Player_and_Tower_struct
         }
         private void NextBatlle()
         {
-            var algo = new Combate(this.play_tower.player);
+            new Combate(this.play_tower.player);
         }
         private void Status()
         {
-            Console.WriteLine("Status");
+            Console.WriteLine("Status:");
             Console.WriteLine("Tá tudo certo!");
         }
         private void MenuItens()

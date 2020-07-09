@@ -12,10 +12,7 @@ namespace Mecanicas.game_play
         {
             int res;
 
-            Console.WriteLine("1 - Lutar");
-            Console.WriteLine("2 - Defender");
-            Console.WriteLine("3 - Usar Item");
-            Console.WriteLine("4 - Meter o pé");
+            Console.WriteLine("1 - Lutar | 2 - Defender | 3 - Usar Item | 4 - Meter o pé");
 
             try
             {
@@ -41,9 +38,7 @@ namespace Mecanicas.game_play
         {
             switch (opt)
             {
-                case 1:
-                    Console.WriteLine("Você deu uma Porrada nele");
-                    return "ataque";
+                case 1: return "ataque";
                 case 2:
                     Console.WriteLine("Você Defendeu. (covarde)");
                     return "false";

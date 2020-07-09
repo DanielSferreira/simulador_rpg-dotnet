@@ -23,10 +23,8 @@ namespace Componentes
 
         private void setOptionsList()
         {
-            this.options.Add("1 - Novo Jogo");
-            this.options.Add("2 - Carregar Jogo");
-            this.options.Add("3 - Opções");
-            this.options.Add("4 - Configurações do Jogador");
+            
+            this.options.Add("1 - Novo Jogo | 2 - Carregar Jogo | 3 - Opções | 4 - Configurações do Jogador");
         }
 
         private void getOptionsList()
