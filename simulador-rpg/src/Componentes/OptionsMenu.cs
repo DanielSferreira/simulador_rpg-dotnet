@@ -7,24 +7,16 @@ namespace Componentes
     public class OptionsMenu
     {
         private int _escolha = 0;
-        private List<string> options = new List<string>();
-
-        public OptionsMenu()
+        public int ShowOption()
         {
-            this.setOptionsList();
             this.getOptionsList();
             this._escolha = this.readLine();
+            return this._escolha;
         }
 
         public int getOption()
         {
             return this._escolha;
-        }
-
-        private void setOptionsList()
-        {
-            
-            this.options.Add("1 - Novo Jogo | 2 - Carregar Jogo | 3 - Opções | 4 - Configurações do Jogador");
         }
 
         private void getOptionsList()
@@ -33,11 +25,8 @@ namespace Componentes
             WriteLine("");
             WriteLine("Olá, bem vindo ao simulador");
             WriteLine("**Escolha uma das opções**");
+            WriteLine("1 - Novo Jogo | 2 - Carregar Jogo | 3 - Opções | 4 - Configurações do Jogador | 5 - Sair da Torre");
             
-            foreach (var item in this.options)
-                WriteLine(item);
-            
-            WriteLine("");
         }
 
         private int readLine()
@@ -45,6 +34,8 @@ namespace Componentes
             
             try
             {
+                
+                Write("Opção: ");
                 this._escolha = System.Convert.ToInt32(Console.ReadLine());
             }
             catch (System.Exception)
@@ -54,7 +45,7 @@ namespace Componentes
                 return this.readLine();
             }
 
-            if(this._escolha > 0 && this._escolha < this.options.Count+1)
+            if(this._escolha > 0 && this._escolha < 6)
                 return this._escolha;
             else
             {

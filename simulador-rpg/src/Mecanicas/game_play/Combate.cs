@@ -37,8 +37,7 @@ namespace Mecanicas.game_play
             if(e.hp <= 0)
                 Console.WriteLine($"{p.Attr.PlayerName} Venceu!!! Vamos prosseguir.");
             else if (p.Attr.HpBase <= 0) 
-                Console.WriteLine($"{p.Attr.PlayerName} Se ferrou.");
-
+                Console.WriteLine("");
             else 
                 batle(p, e);
         }

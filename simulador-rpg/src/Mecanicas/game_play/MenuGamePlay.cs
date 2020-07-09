@@ -5,26 +5,47 @@ using Componentes.Torre;
 namespace Mecanicas.game_play
 
 {
-public struct Player_and_Tower_struct
-{
-    public Player player;
-    public Tower tower;
+    public struct Player_and_Tower_struct
+    {
+        public Player player;
+        public Tower tower;
 
-}
+    }
+
     public class MenuGamePlay
     {
         public Player_and_Tower_struct play_tower;
+        bool ContinueClimbing = true;
+
         public MenuGamePlay(Player player, Tower tower)
         {
             play_tower.player = player;
             play_tower.tower = tower;
-            bool ContinueClimbing = true;
             OptionsMenu opt = new OptionsMenu();
-            while (ContinueClimbing)
+            
+            while (this.ContinueClimbing)
             {
-                opt.ShowOptions();
-                ContinueClimbing = this.option(opt.getOption());
+                if (this.check_player_status() == true)
+                {
+                    opt.ShowOptions();
+                    this.ContinueClimbing = this.option(opt.getOption());
+                }
+                else 
+                {
+                    this.ContinueClimbing = false;
+                }
             }
+        }
+
+        private bool check_player_status()
+        {
+            if (this.play_tower.player.Attr.HpBase <= 0)
+            {
+                Console.WriteLine($"{this.play_tower.player.Attr.PlayerName} perdeu totalmente seu HP morrendo ao subir a torre");
+                Console.WriteLine("Game Over!");
+                return false;
+            }
+            return true;
         }
 
         private bool option(int opt)
@@ -32,8 +53,7 @@ public struct Player_and_Tower_struct
             switch (opt)
             {
                 case 1:
-                    this.NextBatlle();
-                    break;
+                    return this.NextBatlle();
                 case 2:
                     this.Status();
                     break;
@@ -47,9 +67,11 @@ public struct Player_and_Tower_struct
             return true;
 
         }
-        private void NextBatlle()
+        private bool NextBatlle()
         {
+
             new Combate(this.play_tower.player);
+            return true;
         }
         private void Status()
         {

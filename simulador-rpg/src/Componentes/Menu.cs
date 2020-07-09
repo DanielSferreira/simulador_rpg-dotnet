@@ -7,26 +7,36 @@ namespace Componentes
     {
         public Menu()
         {
-            var options = new OptionsMenu();
-            this.option(options.getOption());
+            var opt = new OptionsMenu();
+            bool isContinue = true;
+
+            while (isContinue)
+            {
+                isContinue = this.option(opt.ShowOption());
+            }
+
         }
-        private void option(int opt)
+        private bool option(int opt)
         {
             switch (opt)
             {
                 case 1:
                     this.novoJogo();
-                    return;
+                    break;
                 case 2:
                     this.carregarJogo();
-                    return;
+                    break;
                 case 3:
                     this.carregarOpcoes();
-                    return;
+                    break;
                 case 4:
                     this.criarJogador();
-                    return;
+                    break;
+                case 5:
+                    Console.WriteLine("Acabou");
+                    return false;
             }
+            return true;
         }
         private void novoJogo()
         { 
@@ -42,6 +52,7 @@ namespace Componentes
         }
         private void criarJogador()
         {
+            Console.WriteLine("Carregando Opções do jau");
         }
         private void ErroOpcao()
         {
