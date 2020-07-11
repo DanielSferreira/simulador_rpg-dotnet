@@ -30,7 +30,6 @@ namespace Mecanicas.game_play
 
         private void getOptionsList()
         {
-            
             WriteLine("");
             WriteLine("**Escolha uma das opções**");
             
@@ -42,14 +41,12 @@ namespace Mecanicas.game_play
 
         private int readLine()
         {
-            
             try
             {
                 this._escolha = System.Convert.ToInt32(Console.ReadLine());
             }
             catch (System.Exception)
             {
-                
             WriteLine("Não pode letra filhão, tente novamente: ");
                 return this.readLine();
             }
