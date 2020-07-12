@@ -9,16 +9,17 @@ namespace Mecanicas.game_play.Inventario
         public int _quantidade { get; set; }
         public int _posicao { get; set; }
 
-        public InvectoryItem setNewItem(
-            Item item,
-            int quantidade,
-            int posicao
-        )
+        public InvectoryItem AddItemThatDoesNotExistYet( Item item, int quantidade, int posicao )
         {
             this._item = item;
             this._quantidade = quantidade;
             this._posicao = posicao;
 
+            return this;
+        }
+
+        public InvectoryItem AddItemThatAlreadyExists( Item item )
+        {
             return this;
         }
         public void useItem(Player p)

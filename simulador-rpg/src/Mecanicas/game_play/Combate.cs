@@ -51,7 +51,8 @@ namespace Mecanicas.game_play
         {
             //_player.invenctoryPlayer.shopItem();
              int choice = _player.invenctoryPlayer.showInvectory();
-            _player.invenctoryPlayer._items[choice].useItem(_player);
+            //_player.invenctoryPlayer._items[choice].useItem(_player);
+            _player.invenctoryPlayer._items2[choice].useItem(_player);
         }
 
     }
