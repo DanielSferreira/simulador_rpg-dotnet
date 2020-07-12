@@ -1,9 +1,4 @@
 using System;
-
-/*
-    Separei pelo aumento de linhas, e preferi separar a interface de iteração da calcula
-*/
-
 namespace Mecanicas.game_play
 {
     public class MenuCombat
@@ -33,26 +28,5 @@ namespace Mecanicas.game_play
                 return this.ShowOptions();
             }
         }
-
-        public string ExecuteActions(int opt)
-        {
-            switch (opt)
-            {
-                case 1: return "ataque";
-                case 2:
-                    Console.WriteLine("Você Defendeu. (covarde)");
-                    return "false";
-                case 3:
-                    Console.WriteLine("Você vai usar qual item?");
-                    return "false";
-                case 4:
-                    Console.WriteLine("Arreeeegoooouuuuu");
-                    return "true";
-                default:
-                    Console.WriteLine("Acontece nada, escolheu uma opção invalida, seu bocó");
-                    return "true";
-            }
-        }
-
     }
 }
