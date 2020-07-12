@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Entidades;
 using Mecanicas.game_play.Inventario.itens;
 
 namespace Mecanicas.game_play.Inventario
@@ -25,9 +26,10 @@ namespace Mecanicas.game_play.Inventario
             this._current++;
         }
 
-        public void shopItem()
+        public void shopItem(Player p)
         {
-            new ShopItems();
+            var shop = new ShopItems();
+            this.InitInvectoryDefaultPlayer(shop._shop());
         }
         public int showInvectory()
         {

@@ -79,7 +79,7 @@ namespace Mecanicas.game_play
         }
         private void MenuItens()
         {
-            Console.WriteLine("Aqui o seus Itens");
+            this.play_tower.player.invenctoryPlayer.shopItem(this.play_tower.player);
         }
         private void Loser()
         {

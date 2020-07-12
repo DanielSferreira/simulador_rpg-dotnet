@@ -49,7 +49,7 @@ namespace Mecanicas.game_play
         }
         private void invectory()
         {
-            _player.invenctoryPlayer.shopItem();
+            //_player.invenctoryPlayer.shopItem();
              int choice = _player.invenctoryPlayer.showInvectory();
             _player.invenctoryPlayer._items[choice].useItem(_player);
         }
