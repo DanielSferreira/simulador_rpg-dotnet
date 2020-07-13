@@ -9,7 +9,6 @@ namespace Mecanicas.game_play.Inventario
 
         public ShopItems()
         {
-            System.Console.WriteLine("Aqui você pode comprar items");
             this._loadItemsForShop();
         }
 
@@ -19,20 +18,21 @@ namespace Mecanicas.game_play.Inventario
             this._shopItemList.Add(2, new Potion_m());
             this._shopItemList.Add(3, new Potion_g());
             
-            System.Console.WriteLine("ID \t Item");
+            System.Console.WriteLine("\t Digite o número do id do item que deseja comprar", System.Drawing.Color.Orange);
+            System.Console.WriteLine("\n\nID \t Item");
             foreach (var item in this._shopItemList)
                 System.Console.WriteLine($"{item.Key} \t {item.Value.name}");
         }
 
         public Item _shop()
         {
-            System.Console.Write($"Id do item desejado");
+            System.Console.Write($"Id: ");
             int i = 0;
             
             try 
             {
                 i =  System.Convert.ToInt32(System.Console.ReadLine());
-                if (i < 0 || i > this._shopItemList.Count-1)
+                if (i < 0 || i > this._shopItemList.Count)
                     this._shop();
             } 
             catch(System.Exception)

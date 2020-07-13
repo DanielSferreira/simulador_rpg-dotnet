@@ -20,12 +20,18 @@ namespace Mecanicas.game_play
         public void batle(Player p, Enemy e)
         {
             int opt =this.show_options();
-            
-            if (opt == 1) this.damage();
+            int factor = 5;
+            //if (opt == 1) this.damage();
+            if (opt == 1) this.atackerWithFactor(5);
+            if (opt == 2) factor = this.defenderWithFactor(8);
             if (opt == 3) this.invectory();
+            if (opt == 4) Console.WriteLine("Você Arregou");
+            if (opt == 4) return;
 
             Console.WriteLine($"Status da Luta: \n{p.Attr.PlayerName}: {p.Attr.HpBase} - {e.name}: {e.hp}");
 
+            this._player.Attr.HpBase = this._player.Attr.HpBase - (this._actual_enemy.ataque / 5);
+            
             if (e.hp <= 0)
                 Console.WriteLine($"{p.Attr.PlayerName} Venceu!!! Vamos prosseguir.");
             else if (p.Attr.HpBase <= 0)
@@ -39,14 +45,9 @@ namespace Mecanicas.game_play
             Console.WriteLine("O que ele deve fazer?");
             return new MenuCombat().ShowOptions();
         }
-        private void damage()
-        {
-            if (this.alternar_batle == true)
-                this._actual_enemy.hp = this._actual_enemy.hp - (this._player.Attr.Atk / 5);
-            else
-                this._player.Attr.HpBase = this._player.Attr.HpBase - (this._actual_enemy.ataque / 5);
-            this.alternar_batle = !this.alternar_batle;
-        }
+        private void atackerWithFactor(int factor) =>
+            this._actual_enemy.hp = this._actual_enemy.hp - (this._player.Attr.Atk / factor);
+        
         private void invectory()
         {
             //_player.invenctoryPlayer.shopItem();
@@ -54,6 +55,6 @@ namespace Mecanicas.game_play
             //_player.invenctoryPlayer._items[choice].useItem(_player);
             _player.invenctoryPlayer._items2[choice].useItem(_player);
         }
-
+        private int defenderWithFactor(int factor) => factor;
     }
 }
