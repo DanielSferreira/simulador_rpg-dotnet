@@ -21,7 +21,7 @@ namespace Mecanicas.game_play
         {
             int opt =this.show_options();
             int factor = 5;
-            //if (opt == 1) this.damage();
+            
             if (opt == 1) this.atackerWithFactor(5);
             if (opt == 2) factor = this.defenderWithFactor(8);
             if (opt == 3) this.invectory();

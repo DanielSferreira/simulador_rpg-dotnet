@@ -7,7 +7,7 @@ namespace simulador_rpg
     {
         static void Main(string[] args)
         {
-            var ng = new NewGame();
+            var ng = new NewGame(); 
         }
     }
 }
