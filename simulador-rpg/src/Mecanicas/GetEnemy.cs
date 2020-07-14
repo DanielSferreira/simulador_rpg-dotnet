@@ -12,9 +12,9 @@ namespace Mecanicas
         {
             this._listEnemy.Add(1,new Bat());
             this._listEnemy.Add(2,new Slime());
-            this._listEnemy.Add(3,new Enemy(){hp = 500, name = "Rat", ataque = 75});
-            this._listEnemy.Add(4,new Enemy(){hp = 450, name = "Skeleton", ataque = 150});
-            this._listEnemy.Add(5,new Enemy(){hp = 360, name = "Orc1", ataque = 175});
+            this._listEnemy.Add(3,new Rat());
+            this._listEnemy.Add(4,new Skeleton());
+            this._listEnemy.Add(5,new Orc1());
         }
 
         public Enemy GetEnemyByNumber(int index) 

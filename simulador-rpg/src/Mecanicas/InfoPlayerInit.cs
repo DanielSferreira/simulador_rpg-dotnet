@@ -28,7 +28,7 @@ namespace Mecanicas
          Attr.PlayerName = this.Name;
          Attr.HpBase = 500;
          Attr.Mana   = 250;
-         Attr.Atk    = 250;
+         Attr.Atk    = 1250;
          Attr.Def    = 270;
          Attr.AtkM   = 100;
          Attr.DefM   = 50;

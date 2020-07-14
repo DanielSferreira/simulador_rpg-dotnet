@@ -11,8 +11,7 @@ namespace Mecanicas
         public NewPlayer(InfoPlayerInit player)
         {
             this._player.ClassP = ClassType.getClassName( player.getClassName() );
-            PlayerAttr lll = AssignClassPlayer(player.getPlayerAttr(),this._player.ClassP);
-            this._player.Attr = lll;
+            this._player.Attr = AssignClassPlayer(player.getPlayerAttr(),this._player.ClassP);;
         }
         
         public void getPlayerConsole() => Console.WriteLine($"O Jogador se chama {this._player.Attr.PlayerName}");

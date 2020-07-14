@@ -3,7 +3,6 @@ using Entidades;
 using Entidades.Inimigos;
 namespace Mecanicas.game_play
 {
-
     public class Combate
     {
         public Combate(Player p)
@@ -13,6 +12,7 @@ namespace Mecanicas.game_play
             Console.WriteLine($"{this._player.Attr.PlayerName} ao prosseguir no andar se depara com um {this._actual_enemy.name}");
             batle(this._player, this._actual_enemy);
         }
+
         private Player _player;
         private Enemy _actual_enemy;
         private bool alternar_batle = false;
@@ -23,17 +23,21 @@ namespace Mecanicas.game_play
             int factor = 5;
             
             if (opt == 1) this.atackerWithFactor(5);
-            if (opt == 2) factor = this.defenderWithFactor(8);
+            if (opt == 2) factor = this.defenderWithFactor((int)p.Attr.Def/10);
             if (opt == 3) this.invectory();
             if (opt == 4) Console.WriteLine("Você Arregou");
             if (opt == 4) return;
 
             Console.WriteLine($"Status da Luta: \n{p.Attr.PlayerName}: {p.Attr.HpBase} - {e.name}: {e.hp}");
 
-            this._player.Attr.HpBase = this._player.Attr.HpBase - (this._actual_enemy.ataque / 5);
+            this._player.Attr.HpBase = this._player.Attr.HpBase - (this._actual_enemy.ataque / factor);
+            
             
             if (e.hp <= 0)
+            {
                 Console.WriteLine($"{p.Attr.PlayerName} Venceu!!! Vamos prosseguir.");
+                p.level.addXP(e);
+            }
             else if (p.Attr.HpBase <= 0)
                 Console.WriteLine("");
             else
@@ -50,9 +54,7 @@ namespace Mecanicas.game_play
         
         private void invectory()
         {
-            //_player.invenctoryPlayer.shopItem();
              int choice = _player.invenctoryPlayer.showInvectory();
-            //_player.invenctoryPlayer._items[choice].useItem(_player);
             _player.invenctoryPlayer._items2[choice].useItem(_player);
         }
         private int defenderWithFactor(int factor) => factor;
